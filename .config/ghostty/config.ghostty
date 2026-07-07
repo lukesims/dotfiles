@@ -1,0 +1,51 @@
+font-family = CommitMono Nerd Font Mono
+font-feature = ss01, ss02, ss04, ss05, cv02, cv04
+font-size = 11
+adjust-cell-height = 25%
+
+foreground = #c6ccd7
+background = #181a1f
+background-blur = true
+background-opacity = 0.7
+background-opacity-cells = true
+
+selection-background = #1085ff
+selection-foreground = #ffffff
+
+search-background = #e9d16c
+search-foreground = #000000
+search-selected-background = #e06c75
+search-selected-foreground = #000000
+
+adjust-cursor-thickness = 1
+cursor-color = #1085ff
+cursor-opacity = 1
+cursor-style = bar
+cursor-text = #181a1f
+
+palette-generate = true
+palette = 0=#5f6672
+palette = 1=#e06c75
+palette = 2=#98c379
+palette = 3=#e5c07b
+palette = 4=#61afef
+palette = 5=#b57edc
+palette = 6=#56b6c2
+palette = 7=#a9b2c3
+palette = 8=#5f6672
+palette = 9=#e06c75
+palette = 10=#98c379
+palette = 11=#e5c07b
+palette = 12=#61afef
+palette = 13=#b57edc
+palette = 14=#56b6c2
+palette = 15=#c6ccd7
+
+gtk-wide-tabs = false
+window-height = 50
+window-width = 140
+window-padding-balance = true
+window-padding-color = extend
+window-padding-x = 10
+window-padding-y = 0
+window-theme = dark

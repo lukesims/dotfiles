@@ -1,0 +1,188 @@
+{
+  //---- Editor ------------------------
+
+  "auto_signature_help": true,
+  "code_lens": "on",
+  "colorize_brackets": true,
+  "extend_comment_on_newline": false,
+  "format_on_save": "on",
+  "formatter": "auto",
+  "preferred_line_length": 80,
+  "show_whitespaces": "boundary",
+  "show_wrap_guides": true,
+  "soft_wrap": "editor_width",
+  "unnecessary_code_fade": 0.3,
+  "wrap_guides": [80],
+
+  "buffer_font_size": 15,
+  "buffer_font_weight": 400,
+  "buffer_line_height": { "custom": 1.8 },
+  "buffer_font_family": "CommitMono Nerd Font Mono",
+  "buffer_font_features": {
+    "ss01": true, // Ligatures
+    "ss02": true, // Arrows
+    "ss03": true, // Smart case
+    "ss04": true, // Symbol spacing
+    "ss05": true, // Smart kerning
+    "cv01": false, // Alternative a
+    "cv02": true, // Alternative g
+    "cv03": false, // Square dots
+    "cv04": true, // Alternative i
+    "cv05": false, // Alternative @
+    "cv06": false, // Alternative 6 and 9
+    "cv07": false, // Alternative 0
+    "cv08": false, // Alternative italics
+    "cv09": false, // Lifted *
+    "cv10": false, // Alternative l
+    "cv11": false, // Alternative 1
+  },
+
+  "gutter": {
+    "min_line_number_digits": 3,
+  },
+
+  "indent_guides": {
+    "coloring": "indent_aware",
+  },
+
+  "minimap": {
+    "display_in": "all_editors",
+    "max_width_columns": 80,
+    // "show": "auto",
+    "thumb": "always",
+    "thumb_border": "full",
+  },
+
+  //---- Terminal ----------------------
+
+  "terminal": {
+    "cursor_shape": "bar",
+    "dock": "bottom",
+    // "line_height": { "custom": 1 },
+  },
+
+  //---- AI ----------------------------
+
+  "show_edit_predictions": true,
+
+  "agent": {
+    "dock": "right",
+  },
+
+  "edit_predictions": {
+    "allow_data_collection": "no",
+    "disabled_globs": [
+      "**/*.cert",
+      "**/*.crt",
+      "**/*.key",
+      "**/*.pem",
+      "**/.dev.vars",
+      "**/.env*",
+      "**/.ssh/**",
+      "**/auth.json",
+      "**/secrets.yml",
+    ],
+  },
+
+  "language_models": {
+    "opencode": {
+      "show_zen_models": false,
+    },
+  },
+
+  //---- Languages ---------------------
+
+  "languages": {
+    //
+  },
+
+  //---- UI ----------------------------
+
+  "agent_buffer_font_size": 15,
+  "agent_ui_font_size": 17,
+  "git_commit_buffer_font_size": 14,
+
+  "ui_font_size": 16,
+  "ui_font_weight": 400,
+  "ui_font_family": "Inter",
+  "ui_font_features": {
+    "calt": true,
+  },
+
+  "collaboration_panel": {
+    "button": false,
+    "dock": "left",
+  },
+
+  "git_panel": {
+    "dock": "left",
+  },
+
+  "outline_panel": {
+    "dock": "left",
+  },
+
+  "project_panel": {
+    "bold_folder_labels": true,
+    "dock": "left",
+  },
+
+  "tabs": {
+    "file_icons": false,
+    "git_status": true,
+    "show_diagnostics": "all",
+  },
+
+  //---- Theme -------------------------
+
+  "icon_theme": {
+    "mode": "dark",
+    "light": "Soft Charmed Icons",
+    "dark": "Soft Charmed Icons",
+  },
+
+  "theme": {
+    "dark": "Plastic",
+    "light": "Plastic",
+    "mode": "dark",
+  },
+
+  "theme_overrides": {
+    "Plastic": {
+      "accents": [
+        "#61afef", // cornflowerBlue
+        // "#56B6C2", // fountainBlue
+        "#98C379", // olivine
+        "#E9D16C", // robRoy
+        // "#D19A66", // whiskey
+        "#E06C75", // sunglo
+        "#B57EDC", // lavender
+      ],
+    },
+  },
+
+  //---- Misc. -------------------------
+
+  "calls": {
+    "mute_on_join": true,
+    "share_on_join": false,
+  },
+
+  "private_files": [
+    "**/*.cert",
+    "**/*.crt",
+    "**/*.key",
+    "**/*.pem",
+    "**/.dev.vars",
+    "**/.env*",
+    "**/.ssh/**",
+    "**/auth.json",
+    "**/secrets.yml",
+  ],
+
+  "telemetry": {
+    "anthropic_retention": false,
+    "diagnostics": false,
+    "metrics": false,
+  },
+}
