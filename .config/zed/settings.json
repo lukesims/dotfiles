@@ -96,6 +96,24 @@
     //
   },
 
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "astro": "html",
+        },
+        "experimental": {
+          "classRegex": [
+            "class=\"([^\"]*)\"",
+            "class='([^']*)'",
+            "class:list=\"{([^}]*)}\"",
+            "class:list='{([^}]*)}'",
+          ],
+        },
+      },
+    },
+  },
+
   //---- UI ----------------------------
 
   "agent_buffer_font_size": 15,
