@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# https://yadm.io/docs/bootstrap#bootstrap-directory
+# https://github.com/yadm-dev/yadm/blob/ec100410/contrib/bootstrap/bootstrap-in-dir
+
+set -euo pipefail
+
+bootstrap_dir="${BASH_SOURCE[0]}.d"
+
+if [[ ! -d "$bootstrap_dir" ]]; then
+    echo "Error: bootstrap directory '$bootstrap_dir' not found" >&2
+    exit 1
+fi
+
+declare -a bootstrap_files
+
+while IFS= read -r file; do
+    if [[ -x "$file" && ! "$file" =~ "##" && ! "$file" =~ ~$ ]]; then
+        bootstrap_files+=("$file")
+    fi
+done < <(find -L "$bootstrap_dir" -type f | sort)
+
+for bootstrap in "${bootstrap_files[@]}"; do
+    echo -e "\nExecuting $bootstrap"
+
+    if ! "$bootstrap"; then
+        echo "Error: bootstrap script '$bootstrap' failed" >&2
+        exit 1
+    fi
+done
