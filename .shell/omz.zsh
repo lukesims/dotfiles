@@ -1,4 +1,4 @@
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.shell/oh-my-zsh"
 
 # Handled by Starship
 unset ZSH_THEME

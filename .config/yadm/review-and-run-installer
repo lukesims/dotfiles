@@ -1,0 +1,29 @@
+#!/bin/bash
+set -e
+
+installer_url="$1"
+shell_cmd="${2:-sh}"
+
+if [[ -z "$installer_url" ]]; then
+    echo "Usage: $0 <URL> [shell_command]"
+    exit 1
+fi
+
+temp_file=$(mktemp)
+trap 'rm -f "$temp_file"' EXIT
+
+echo "Downloading $installer_url..."
+curl -fsSL "$installer_url" -o "$temp_file"
+
+read -p "Would you like to review the script before executing it? [y/N] " read_choice
+if [[ "$read_choice" =~ ^[Yy]$ ]]; then
+    bat --paging=always "$temp_file"
+    read -p "Would you still like to execute the script? [y/N] " exec_choice
+    if [[ ! "$exec_choice" =~ ^[Yy]$ ]]; then
+        echo "Execution aborted."
+        exit 0
+    fi
+fi
+
+echo "Executing installer..."
+"$shell_cmd" "$temp_file"
