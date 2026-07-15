@@ -4,6 +4,7 @@
   "auto_signature_help": true,
   "code_lens": "on",
   "colorize_brackets": true,
+  "diff_view_style": "unified",
   "extend_comment_on_newline": false,
   "format_on_save": "on",
   "formatter": "auto",
@@ -133,6 +134,8 @@
   },
 
   "git_panel": {
+    "group_by": "status",
+    "tree_view": false,
     "dock": "left",
   },
 
@@ -146,7 +149,7 @@
   },
 
   "tabs": {
-    "file_icons": false,
+    "file_icons": true,
     "git_status": true,
     "show_diagnostics": "all",
   },

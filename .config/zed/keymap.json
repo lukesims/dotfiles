@@ -1,26 +1,35 @@
-// Zed keymap
-//
-// For information on binding keys, see the Zed
-// documentation: https://zed.dev/docs/key-bindings
-//
-// To see the default key bindings run `zed: open default keymap`
-// from the command palette.
 [
   {
+    "context": "Editor",
+    "unbind": {
+      "ctrl-y": "editor::Redo",
+      "ctrl-;": "editor::ToggleLineNumbers",
+      "ctrl-'": "editor::ToggleSelectedDiffHunks",
+    },
+    "bindings": {
+      "ctrl-;": "editor::ToggleSelectedDiffHunks",
+      "ctrl-y": [
+        "action::Sequence",
+        [
+          [
+            "editor::MoveToBeginningOfLine",
+            { "stop_at_indent": true, "stop_at_soft_wraps": false },
+          ],
+          ["editor::SelectToEndOfLine", { "stop_at_soft_wraps": false }],
+          "editor::Paste",
+        ],
+      ],
+    },
+  },
+
+  {
     "context": "Workspace",
+    "unbind": {
+      "ctrl-`": "terminal_panel::Toggle",
+    },
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "ctrl-'": "terminal_panel::Toggle",
+      "ctrl-#": "workspace::NewCenterTerminal",
     },
   },
-  {
-    "context": "Editor && vim_mode == insert",
-    "bindings": {
-      // "j k": "vim::NormalBefore"
-    },
-  },
-  {
-    "bindings": {
-      "ctrl-#": "workspace::NewCenterTerminal"
-    }
-  }
 ]
