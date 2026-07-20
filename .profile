@@ -1,4 +1,4 @@
-export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.opencode/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$HOME/.opencode/bin:$HOME/.config/composer/vendor/bin:$PATH"
 
 export LANG=en_GB.UTF-8
 
