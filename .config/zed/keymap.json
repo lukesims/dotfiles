@@ -23,6 +23,23 @@
   },
 
   {
+    "context": "Pane",
+    "unbind": {
+      "ctrl-shift-f": "project_search::ToggleFocus",
+    },
+    "bindings": {
+      "ctrl-shift-f": "workspace::NewSearch",
+    },
+  },
+
+  {
+    "context": "ProjectSearchBar",
+    "unbind": {
+      "ctrl-shift-f": "search::FocusSearch",
+    },
+  },
+
+  {
     "context": "Workspace",
     "unbind": {
       "ctrl-`": "terminal_panel::Toggle",
