@@ -5,7 +5,7 @@
   "code_lens": "on",
   "colorize_brackets": true,
   "diff_view_style": "unified",
-  "extend_comment_on_newline": false,
+  "extend_comment_on_newline": true,
   "format_on_save": "on",
   "formatter": "auto",
   "preferred_line_length": 80,
